@@ -3,6 +3,7 @@ package com.example.androidbasic01_20200521;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.SearchView;
@@ -28,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                FirstActivity로 이동.
+
+//                비행기 티켓 발권.
+                Intent  myIntent = new Intent(MainActivity.this, FirstActivity.class);
+//               startActivity를 이용하여 출발함.
+                startActivity(myIntent);
+
+//                이 액티비티를 종료하는 코드 (이동처럼 보이도록 처리.)
+                finish();
 
             }
         });
